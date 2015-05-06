@@ -220,12 +220,8 @@ for i in ["1", "2", "3", "4", "u", "i", "o", "p"]:
         Key([mod, "shift"], i, lazy.window.togroup(i))
     )
 
-border = dict(border_width=1)
-
 layouts = [
-    layout.Stack(stacks=2, **border),
-    layout.MonadTall(**border), 
-    # layout.Stack(stacks=2, border_width=1),
+    layout.MonadTall(border_width=1), 
     layout.Max(),
 ]
 
