@@ -177,7 +177,7 @@ keys = [
     Key([mod], "g",              lazy.switchgroup()),
 
     # start specific apps
-    # Key([mod], "n",              lazy.spawn("firefox")),
+    Key([mod], "b",              lazy.spawn("firefox")),
     Key([mod], "Return",         lazy.spawn("urxvt")),
 
     # Change the volume if your keyboard has special volume keys.
