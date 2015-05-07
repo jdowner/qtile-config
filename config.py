@@ -179,6 +179,7 @@ keys = [
     # start specific apps
     Key([mod], "b",              lazy.spawn("firefox")),
     Key([mod], "Return",         lazy.spawn("urxvt")),
+    Key([mod], "F12",            lazy.spawn("xscreensaver-command -lock")),
 
     # Change the volume if your keyboard has special volume keys.
     Key(
