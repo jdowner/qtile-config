@@ -4,6 +4,10 @@
 #
 #    python config.py
 
+import logging
+import logging.handlers
+import os
+
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
@@ -232,4 +236,9 @@ follow_mouse_focus = True
 # start the applications at Qtile startup
 @hook.subscribe.startup
 def startup():
-    pass
+    logger = logging.getLogger('qtile')
+    logger.addHandler(logging.handlers.RotatingFileHandler(
+        filename=os.path.join(os.path.expanduser('~'), '.config/qtile/qtile.log'),
+        maxBytes=100000,
+        backupCount=10,
+        ))
