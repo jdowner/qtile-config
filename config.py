@@ -229,19 +229,6 @@ layouts = [
 main = None
 follow_mouse_focus = True
 
-import subprocess, re
-
-def is_running(process):
-    s = subprocess.Popen(["ps", "axuw"], stdout=subprocess.PIPE)
-    for x in s.stdout:
-        if re.search(process, x):
-            return True
-    return False
-
-def execute_once(process):
-    if not is_running(process):
-        return subprocess.Popen(process.split())
-
 # start the applications at Qtile startup
 @hook.subscribe.startup
 def startup():
