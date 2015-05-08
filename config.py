@@ -245,14 +245,4 @@ def execute_once(process):
 # start the applications at Qtile startup
 @hook.subscribe.startup
 def startup():
-    rc_dir = "/home/arkchar/.config/wmStartupScripts/"
-    subprocess.Popen("sleep 3".split())
-    execute_once("nm-applet")
-    execute_once("synergys")
-    execute_once("xcompmgr")
-    execute_once(rc_dir + "xmodmap.py")
-    execute_once("ibus-daemon --xim")
-    execute_once("hsetroot -tile /home/arkchar/Pictures/desktop.jpg")
-    execute_once(rc_dir + "trackpoint.sh")
-    execute_once("xsetroot -cursor_name left_ptr")
-    # execute_once("xset m 4 0")
+    pass
