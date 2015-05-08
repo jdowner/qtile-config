@@ -57,12 +57,17 @@ def idle_dialogues(window):
 @hook.subscribe.client_new
 def libreoffice_dialogues(window):
     if((window.window.get_wm_class() == ('VCLSalFrame', 'libreoffice-calc')) or
-    (window.window.get_wm_class() == ('VCLSalFrame', 'LibreOffice 3.4'))):
+            (window.window.get_wm_class() == ('VCLSalFrame', 'LibreOffice 3.4'))):
         window.floating = True
 
 @hook.subscribe.client_new
 def inkscape_dialogues(window):
-   if(window.window.get_name() in ('Sozi', 'Create new database')):
+    if(window.window.get_name() in ('Sozi', 'Create new database')):
+        window.floating = True
+
+@hook.subscribe.client_new
+def pinetry_dialogue(window):
+    if(window.window.get_name() == 'pinentry'):
         window.floating = True
 
 # Super_L (the Windows key) is typically bound to mod4 by default, so we use
