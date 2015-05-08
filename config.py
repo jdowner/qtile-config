@@ -62,12 +62,7 @@ def libreoffice_dialogues(window):
 
 @hook.subscribe.client_new
 def inkscape_dialogues(window):
-   if(window.window.get_name() == 'Sozi'):
-        window.floating = True
-
-@hook.subscribe.client_new
-def inkscape_dialogues(window):
-   if((window.window.get_name() == 'Create new database')):
+   if(window.window.get_name() in ('Sozi', 'Create new database')):
         window.floating = True
 
 # Super_L (the Windows key) is typically bound to mod4 by default, so we use
