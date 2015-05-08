@@ -222,7 +222,7 @@ for i in ["1", "2", "3", "4", "u", "i", "o", "p"]:
     )
 
 layouts = [
-    layout.MonadTall(border_width=1), 
+    layout.MonadTall(border_width=1),
     layout.Max(),
 ]
 
