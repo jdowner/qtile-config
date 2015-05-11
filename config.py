@@ -182,6 +182,7 @@ keys = [
 
     # start specific apps
     Key([mod], "b",              lazy.spawn("firefox")),
+    Key([mod], "e",              lazy.spawn("evince")),
     Key([mod], "Return",         lazy.spawn("urxvt")),
     Key([mod], "F12",            lazy.spawn("xscreensaver-command -lock")),
 
