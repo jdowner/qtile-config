@@ -217,14 +217,11 @@ mouse = [
 # Next, we specify group names, and use the group name list to generate an appropriate
 # set of bindings for group switching.
 groups = []
-for i in ["1", "2", "3", "4", "u", "i", "o", "p"]:
-    groups.append(Group(i))
-    keys.append(
-        Key([mod], i, lazy.group[i].toscreen())
-    )
-    keys.append(
-        Key([mod, "shift"], i, lazy.window.togroup(i))
-    )
+labels = [str(n) for n in range(10)]
+for label in labels:
+    groups.append(Group(label))
+    keys.append(Key([mod], label, lazy.group[label].toscreen()))
+    keys.append(Key([mod, "shift"], label, lazy.window.togroup(label)))
 
 layouts = [
     layout.MonadTall(border_width=1),
