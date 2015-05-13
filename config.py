@@ -18,31 +18,58 @@ from libqtile import layout, bar, widget, hook
 #
 # Below is a screen with a top bar that contains several basic qtile widgets.
 
-screens = [Screen(top = bar.Bar([
-        # This is a list of our virtual desktops.
-        widget.GroupBox(urgent_alert_method='text',
-                        fontsize=10, 
-                        borderwidth=1),
+screens = [
+        Screen(
+            top=bar.Bar([
+                # This is a list of our virtual desktops.
+                widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
 
-        # A prompt for spawning processes or switching groups. This will be
-        # invisible most of the time.
-        widget.Prompt(),
-        # Current window name.
-        widget.WindowName(foreground = "a0a0a0",),
-        widget.Notify(),
-        widget.Systray(),
-        widget.Volume(foreground = "70ff70"),
-        widget.Battery(
-            energy_now_file='charge_now',
-            energy_full_file='charge_full',
-            power_now_file='current_now',
-            update_delay = 5,
-            foreground = "7070ff",), 
-        widget.Systray(),
-        widget.Clock(foreground = "a0a0a0",
+                # A prompt for spawning processes or switching groups. This will be
+                # invisible most of the time.
+                widget.Prompt(),
+                # Current window name.
+                widget.WindowName(foreground = "a0a0a0",),
+                widget.Notify(),
+                widget.Systray(),
+                widget.Volume(foreground = "70ff70"),
+                widget.Battery(
+                    energy_now_file='charge_now',
+                    energy_full_file='charge_full',
+                    power_now_file='current_now',
+                    update_delay = 5,
+                    foreground = "7070ff",),
+                widget.Systray(),
+                widget.Clock(foreground = "a0a0a0",
                     fmt = '%Y-%m-%d %a %I:%M %p'),
-    ], 22)) # our bar is (xx)px high
-]
+                ],
+                22) # our bar is (xx)px high
+            ),
+        Screen(
+            top=bar.Bar([
+                # This is a list of our virtual desktops.
+                widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
+
+                # A prompt for spawning processes or switching groups. This will be
+                # invisible most of the time.
+                widget.Prompt(),
+                # Current window name.
+                widget.WindowName(foreground = "a0a0a0",),
+                widget.Notify(),
+                widget.Systray(),
+                widget.Volume(foreground = "70ff70"),
+                widget.Battery(
+                    energy_now_file='charge_now',
+                    energy_full_file='charge_full',
+                    power_now_file='current_now',
+                    update_delay = 5,
+                    foreground = "7070ff",),
+                widget.Systray(),
+                widget.Clock(foreground = "a0a0a0",
+                    fmt = '%Y-%m-%d %a %I:%M %p'),
+                ],
+                22) # our bar is (xx)px high
+            ),
+        ]
 
 @hook.subscribe.client_new
 def dialogs(window):
@@ -104,7 +131,7 @@ keys = [
     # Key([mod], "m",
     #     lazy.window.toggle_maximize()), 
     Key([mod], "Tab",
-        lazy.group.next_window()), 
+        lazy.next_screen()), 
     Key([mod, "shift"], "Tab",
         lazy.group.prev_window(),
         lazy.window.disable_floating()),
