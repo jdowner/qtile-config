@@ -21,51 +21,43 @@ from libqtile import layout, bar, widget, hook
 screens = [
         Screen(
             top=bar.Bar([
-                # This is a list of our virtual desktops.
                 widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
-
-                # A prompt for spawning processes or switching groups. This will be
-                # invisible most of the time.
                 widget.Prompt(),
-                # Current window name.
-                widget.WindowName(foreground = "a0a0a0",),
+                widget.WindowName(foreground="a0a0a0"),
                 widget.Notify(),
-                widget.Systray(),
-                widget.Volume(foreground = "70ff70"),
+                widget.Volume(foreground="70ff70"),
                 widget.Battery(
                     energy_now_file='charge_now',
                     energy_full_file='charge_full',
                     power_now_file='current_now',
-                    update_delay = 5,
-                    foreground = "7070ff",),
-                widget.Systray(),
-                widget.Clock(foreground = "a0a0a0",
-                    fmt = '%Y-%m-%d %a %I:%M %p'),
+                    update_delay=5,
+                    foreground="7070ff",
+                    ),
+                widget.Clock(
+                    foreground="a0a0a0",
+                    format='%a %I:%M %p %Y.%m.%d',
+                    ),
                 ],
                 22) # our bar is (xx)px high
             ),
         Screen(
             top=bar.Bar([
-                # This is a list of our virtual desktops.
                 widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
-
-                # A prompt for spawning processes or switching groups. This will be
-                # invisible most of the time.
                 widget.Prompt(),
-                # Current window name.
-                widget.WindowName(foreground = "a0a0a0",),
+                widget.WindowName(foreground="a0a0a0"),
                 widget.Notify(),
-                widget.Systray(),
-                widget.Volume(foreground = "70ff70"),
+                widget.Volume(foreground="70ff70"),
                 widget.Battery(
                     energy_now_file='charge_now',
                     energy_full_file='charge_full',
                     power_now_file='current_now',
-                    update_delay = 5,
-                    foreground = "7070ff",),
-                widget.Systray(),
-                widget.Clock(foreground = "a0a0a0",
-                    fmt = '%Y-%m-%d %a %I:%M %p'),
+                    update_delay=5,
+                    foreground="7070ff",
+                    ),
+                widget.Clock(
+                    foreground="a0a0a0",
+                    format='%a %I:%M %p %Y.%m.%d',
+                    ),
                 ],
                 22) # our bar is (xx)px high
             ),
@@ -109,47 +101,22 @@ alt = "mod1"
 # The keys variable contains a list of all of the keybindings that qtile will
 # look through each time there is a key pressed.
 keys = [
-    # Log out; note that this doesn't use mod4: that's intentional in case mod4
-    # gets hosed (which happens if you unplug and replug your usb keyboard
-    # sometimes, or on system upgrades). This way you can still log back out
-    # and in gracefully.
-    Key([mod, "shift"], "q",
-        lazy.shutdown()),
-    Key([mod, "shift"],  "r",
-        lazy.restart()),
-    Key([mod], "c",
-        lazy.window.kill()),
-    Key([mod, "shift"], "m",
-        lazy.group.setlayout('max')),
-    Key([mod], "s",
-        lazy.group.setlayout('stack')),
-    Key([mod], "n",
-        lazy.group.setlayout('xmonad-tall')),
-    Key([mod], "x",
-        lazy.group.setlayout('xmonad-tall')),
+    Key([mod, "shift"], "q", lazy.shutdown()),
+    Key([mod, "shift"],  "r", lazy.restart()),
+    Key([mod], "c", lazy.window.kill()),
+    Key([mod, "shift"], "m", lazy.group.setlayout('max')),
+    Key([mod], "s", lazy.group.setlayout('stack')),
+    Key([mod], "n", lazy.group.setlayout('xmonad-tall')),
+    Key([mod], "x", lazy.group.setlayout('xmonad-tall')),
 
-    # Key([mod], "m",
-    #     lazy.window.toggle_maximize()), 
-    Key([mod], "Tab",
-        lazy.next_screen()), 
+    Key([mod], "Tab", lazy.next_screen()),
     Key([mod, "shift"], "Tab",
         lazy.group.prev_window(),
         lazy.window.disable_floating()),
-    # Bindings to control the layouts
-    # Key([mod], "h",
-    #     lazy.group.prev_window()), 
-    # Key([mod], "l",
-    #     lazy.group.next_window()),
-    # Key([mod], "f",
-    #     lazy.window.toggle_floating()), 
-    Key([mod], "f",
-        lazy.window.toggle_fullscreen()),
-    Key([mod, alt], "j",
-        lazy.window.opacity(0.5)), 
-    Key([mod, alt], "k",
-        lazy.window.opacity(1.0)), 
-    # Key([mod, alt], "k",
-    #     lazy.window.up_opacity()), 
+
+    Key([mod], "f", lazy.window.toggle_fullscreen()),
+    Key([mod, alt], "j", lazy.window.opacity(0.5)),
+    Key([mod, alt], "k", lazy.window.opacity(1.0)),
     Key([mod], "h",
         lazy.layout.previous(), # Stack
         lazy.layout.left()),    # xmonad-tall
@@ -200,9 +167,6 @@ keys = [
         lazy.layout.shrink(),               # xmonad-tall
         lazy.layout.increase_nmaster()),   # Tile
 
-    # Key([mod], "Tab",
-    #     lazy.nextlayout()),
-
     # interact with prompts
     Key([mod], "r",              lazy.spawncmd()),
     Key([mod], "g",              lazy.switchgroup()),
@@ -212,24 +176,6 @@ keys = [
     Key([mod], "e",              lazy.spawn("evince")),
     Key([mod], "Return",         lazy.spawn("urxvt")),
     Key([mod], "F12",            lazy.spawn("xscreensaver-command -lock")),
-
-    # Change the volume if your keyboard has special volume keys.
-    Key(
-        [], "XF86AudioRaiseVolume",
-        lazy.spawn("amixer -c 0 -q set Master 2dB+")
-    ),
-    Key(
-        [], "XF86AudioLowerVolume",
-        lazy.spawn("amixer -c 0 -q set Master 2dB-")
-    ),
-    Key(
-        [], "XF86AudioMute",
-        lazy.spawn("amixer -c 0 -q set Master toggle")
-    ),
-
-    # Also allow changing volume the old fashioned way.
-    Key([mod], "equal", lazy.spawn("amixer -c 0 -q set Master 2dB+")),
-    Key([mod], "minus", lazy.spawn("amixer -c 0 -q set Master 2dB-")),
 ]
 
 # This allows you to drag windows around with the mouse if you want.
