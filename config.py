@@ -35,7 +35,8 @@ screens = [
                     ),
                 widget.Clock(
                     foreground="a0a0a0",
-                    format='%a %I:%M %p %Y.%m.%d',
+                    format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',
+                    markup=True,
                     ),
                 ],
                 22) # our bar is (xx)px high
@@ -56,7 +57,8 @@ screens = [
                     ),
                 widget.Clock(
                     foreground="a0a0a0",
-                    format='%a %I:%M %p %Y.%m.%d',
+                    format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',
+                    markup=True,
                     ),
                 ],
                 22) # our bar is (xx)px high
