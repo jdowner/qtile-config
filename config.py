@@ -18,6 +18,21 @@ from libqtile import layout, bar, widget, hook
 #
 # Below is a screen with a top bar that contains several basic qtile widgets.
 
+config_dir = os.path.expanduser('~/.config/qtile')
+battery_custom_icons = {
+        "battery-full-charged": "icons/battery-full.png",
+        "battery-full-charging": "icons/battery-full-charging.png",
+        "battery-full": "icons/battery-full.png",
+        "battery-good-charging": "icons/battery-good-charging.png",
+        "battery-good": "icons/battery-good.png",
+        "battery-caution-charging": "icons/battery-caution-charging.png",
+        "battery-caution": "icons/battery-caution.png",
+        "battery-low-charging": "icons/battery-low-charging.png",
+        "battery-low": "icons/battery-low.png",
+        "battery-empty": "icons/battery-empty.png",
+        }
+battery_custom_icons = {k: os.path.join(config_dir, v) for k, v in battery_custom_icons.items()}
+
 screens = [
         Screen(
             top=bar.Bar([
@@ -26,13 +41,7 @@ screens = [
                 widget.WindowName(foreground="a0a0a0"),
                 widget.Notify(),
                 widget.Volume(foreground="70ff70"),
-                widget.Battery(
-                    energy_now_file='charge_now',
-                    energy_full_file='charge_full',
-                    power_now_file='current_now',
-                    update_delay=5,
-                    foreground="7070ff",
-                    ),
+                widget.BatteryIcon(custom_icons=battery_custom_icons),
                 widget.Clock(
                     foreground="a0a0a0",
                     format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',
@@ -48,13 +57,6 @@ screens = [
                 widget.WindowName(foreground="a0a0a0"),
                 widget.Notify(),
                 widget.Volume(foreground="70ff70"),
-                widget.Battery(
-                    energy_now_file='charge_now',
-                    energy_full_file='charge_full',
-                    power_now_file='current_now',
-                    update_delay=5,
-                    foreground="7070ff",
-                    ),
                 widget.Clock(
                     foreground="a0a0a0",
                     format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',

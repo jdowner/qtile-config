@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="battery-icons.svg"
+   inkscape:export-filename="/home/jdowner/battery-full-charging.png"
+   inkscape:export-xdpi="8.6400003"
+   inkscape:export-ydpi="8.6400003">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="430.16886"
+     inkscape:cy="553.73102"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer6"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="0"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0">
+    <sodipodi:guide
+       orientation="1,0"
+       position="124,851.5"
+       id="guide3768" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="496.5,798.5"
+       id="guide3778" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="186,861.5"
+       id="guide3780" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="90.75,741.25"
+       id="guide3782" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="113,491.5"
+       id="guide3784" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="67,571.5"
+       id="guide3786" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="614,757.75331"
+       id="guide3788" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="-240,-62"
+       id="guide4035" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer9"
+     inkscape:label="bbox">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect4010"
+       width="569.94196"
+       height="369.44199"
+       x="44.029011"
+       y="191.39119"
+       inkscape:export-filename="/home/jdowner/battery-full-charging.png"
+       inkscape:export-xdpi="5.8308463"
+       inkscape:export-ydpi="5.8308463" />
+  </g>
+  <g
+     inkscape:label="base"
+     inkscape:groupmode="layer"
+     id="layer1"
+     sodipodi:insensitive="true">
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#a0a0a0;stroke-width:20.11336708;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 114.34268,280.98987 389.88663,0 c 11.08,0 20,8.92 20,20 l 0,189.88663 c 0,11.08 -8.92,20 -20,20 l -389.88663,0 c -11.08,0 -19.999998,-8.92 -19.999998,-20 l 0,-189.88663 c 0,-11.08 8.919998,-20 19.999998,-20 z"
+       id="rect3760" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#a0a0a0;fill-opacity:1;stroke:#a0a0a0;stroke-width:20;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 527.1444,335.96444 0,119.9375 20.3125,0 c 11.08,0 20,-8.92 20,-20 l 0,-79.9375 c 0,-11.08 -8.92,-20 -20,-20 l -20.3125,0 z"
+       id="rect3762"
+       inkscape:export-xdpi="15.435462"
+       inkscape:export-ydpi="15.435462"
+       inkscape:export-filename="/home/jdowner/battery-full-charging.png" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="powered"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <g
+       id="g4017">
+      <path
+         sodipodi:open="true"
+         sodipodi:end="3.1415927"
+         sodipodi:start="0"
+         transform="matrix(0,0.72854077,-0.72854077,0,585.66969,185.02063)"
+         d="m 396,283.86218 a 106.5,106.5 0 1 1 -213,0"
+         sodipodi:ry="106.5"
+         sodipodi:rx="106.5"
+         sodipodi:cy="283.86218"
+         sodipodi:cx="289.5"
+         id="path3924"
+         style="fill:#a0a0a0;fill-opacity:1;stroke:#a0a0a0;stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         sodipodi:type="arc" />
+      <rect
+         y="311.0582"
+         x="373.28369"
+         height="169.75"
+         width="24"
+         id="rect3926"
+         style="fill:#a0a0a0;fill-opacity:1;stroke:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3930"
+         d="m 160.8253,395.93318 157.68879,0"
+         style="fill:none;stroke:#a0a0a0;stroke-width:30;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <path
+         style="fill:none;stroke:#a0a0a0;stroke-width:30;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         d="m 387.91509,352.01737 65.8316,0"
+         id="path3932"
+         inkscape:connector-curvature="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3934"
+         d="m 387.91509,439.84899 65.8316,0"
+         style="fill:none;stroke:#a0a0a0;stroke-width:30;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="charge1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#404040;fill-opacity:0.99607843;stroke:#303030;stroke-width:0.88491839;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3770"
+       width="76.615082"
+       height="168.86507"
+       x="124.44246"
+       y="311.55466" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="charge2"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       y="311.55466"
+       x="221.94246"
+       height="168.86507"
+       width="76.615082"
+       id="rect3790"
+       style="fill:#404040;fill-opacity:0.99607843;stroke:#303030;stroke-width:0.88491839;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="charge3"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#404040;fill-opacity:0.99607843;stroke:#303030;stroke-width:0.88491839;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect3792"
+       width="76.615082"
+       height="168.86507"
+       x="319.44247"
+       y="311.55466" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="charge4"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       y="311.55466"
+       x="416.94244"
+       height="168.86507"
+       width="76.615082"
+       id="rect3794"
+       style="fill:#404040;fill-opacity:0.99607843;stroke:#303030;stroke-width:0.88491839;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="charging"
+     style="display:inline">
+    <path
+       style="fill:#a0a0a0;fill-opacity:1;stroke:#000000;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       d="m 439.036,246.49568 -115.78125,112.5625 -77.4375,1.125 -66.28125,185.1875 115.8125,-112.59375 77.4375,-1.125 66.25,-185.15625 z"
+       id="path4037"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/jdowner/battery-full-charging.png"
+       inkscape:export-xdpi="5.8308463"
+       inkscape:export-ydpi="5.8308463" />
+  </g>
+</svg>
