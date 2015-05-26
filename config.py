@@ -33,38 +33,39 @@ battery_custom_icons = {
         }
 battery_custom_icons = {k: os.path.join(config_dir, v) for k, v in battery_custom_icons.items()}
 
+
+default_screen_widgets = [
+        widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
+        widget.Prompt(),
+        widget.WindowName(foreground="a0a0a0"),
+        widget.Notify(),
+        widget.Volume(foreground="70ff70"),
+        widget.Clock(
+            foreground="a0a0a0",
+            format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',
+            markup=True,
+            ),
+        ]
+
+primary_screen_widgets = [
+        widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
+        widget.Prompt(),
+        widget.WindowName(foreground="a0a0a0"),
+        widget.Notify(),
+        widget.Volume(foreground="70ff70"),
+        widget.Clock(
+            foreground="a0a0a0",
+            format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',
+            markup=True,
+            ),
+        ]
+
+if os.path.exists('/proc/acpi/battery'):
+    primary_screen_widgets.insert(1, widget.BatteryIcon(custom_icons=battery_custom_icons))
+
 screens = [
-        Screen(
-            top=bar.Bar([
-                widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
-                widget.Prompt(),
-                widget.WindowName(foreground="a0a0a0"),
-                widget.Notify(),
-                widget.Volume(foreground="70ff70"),
-                widget.BatteryIcon(custom_icons=battery_custom_icons),
-                widget.Clock(
-                    foreground="a0a0a0",
-                    format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',
-                    markup=True,
-                    ),
-                ],
-                22) # our bar is (xx)px high
-            ),
-        Screen(
-            top=bar.Bar([
-                widget.GroupBox(urgent_alert_method='text', fontsize=10, borderwidth=1),
-                widget.Prompt(),
-                widget.WindowName(foreground="a0a0a0"),
-                widget.Notify(),
-                widget.Volume(foreground="70ff70"),
-                widget.Clock(
-                    foreground="a0a0a0",
-                    format='<small>%a</small> <b>%I:%M %p</b> <small>%Y.%m.%d</small>',
-                    markup=True,
-                    ),
-                ],
-                22) # our bar is (xx)px high
-            ),
+        Screen(top=bar.Bar(primary_screen_widgets, size=22)),
+        Screen(top=bar.Bar(default_screen_widgets, size=22)),
         ]
 
 @hook.subscribe.client_new
