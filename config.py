@@ -212,9 +212,29 @@ follow_mouse_focus = True
 # start the applications at Qtile startup
 @hook.subscribe.startup
 def startup():
-    logger = logging.getLogger('qtile')
+    logger = logging.getLogger('qtile.config')
+    logger.setLevel(logging.INFO)
     logger.addHandler(logging.handlers.RotatingFileHandler(
         filename=os.path.join(os.path.expanduser('~'), '.config/qtile/qtile.log'),
         maxBytes=100000,
         backupCount=10,
         ))
+
+
+@hook.subscribe.current_screen_change
+def current_screen_change():
+    logger = logging.getLogger('qtile.config')
+
+    try:
+        root = screens[0].qtile
+        current_window = root.currentGroup.currentWindow
+
+        for group in root.groups:
+            group_window = group.currentWindow
+            if group_window is not None and group_window is not current_window:
+                group_window.bordercolor = 0x808080
+                group_window.window.set_attribute(borderpixel=group_window.bordercolor)
+
+
+    except Exception as e:
+        logger.exception(e)
