@@ -230,8 +230,12 @@ def current_screen_change():
         for group in root.groups:
             group_window = group.currentWindow
             if group_window is not None and group_window is not current_window:
-                group_window.bordercolor = 0x808080
-                group_window.window.set_attribute(borderpixel=group_window.bordercolor)
+                try:
+                    group_window.bordercolor = 0x808080
+                    group_window.window.set_attribute(borderpixel=group_window.bordercolor)
+
+                except AttributeError:
+                    pass
 
 
     except Exception as e:
