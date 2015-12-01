@@ -8,8 +8,6 @@ import logging
 import logging.handlers
 import os
 
-import Xlib.display
-
 from libqtile.config import Key, Screen, Group, Drag, Click
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
@@ -238,17 +236,11 @@ def current_screen_change():
 
         # Determine the geometry of the window that we just switched to
         geometry = current_window.window.get_geometry()
-        x = geometry.x
-        y = geometry.y
         w = geometry.width
         h = geometry.height
 
         # Move the mouse to the middle of the new window
-        d = Xlib.display.Display()
-        s = d.screen()
-        root = s.root
-        root.warp_pointer(x + w / 2, y + h / 2)
-        d.sync()
+        current_window.window.warp_pointer(w / 2, h / 2)
 
         for group in root.groups:
             group_window = group.currentWindow
