@@ -120,8 +120,6 @@ keys = [
         lazy.window.disable_floating()),
 
     Key([mod], "f", lazy.window.toggle_fullscreen()),
-    Key([mod, alt], "j", lazy.window.opacity(0.5)),
-    Key([mod, alt], "k", lazy.window.opacity(1.0)),
     Key([mod], "h",
         lazy.layout.previous(), # Stack
         lazy.layout.left()),    # xmonad-tall
