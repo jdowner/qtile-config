@@ -192,14 +192,21 @@ mouse = [
     Click([mod], "Button2", lazy.window.bring_to_front())
 ]
 
-# Next, we specify group names, and use the group name list to generate an appropriate
-# set of bindings for group switching.
-groups = []
-labels = [str(n) for n in range(1, 10)]
-for label in labels:
-    groups.append(Group(label))
-    keys.append(Key([mod], label, lazy.group[label].toscreen()))
-    keys.append(Key([mod, "shift"], label, lazy.window.togroup(label)))
+# Next, we specify group names, and use the group name list to generate an
+# appropriate set of bindings for group switching.
+config_path = os.path.expanduser('~/.config/qtile')
+if os.path.exists(os.path.join(config_path, 'dual-screen')):
+    labels = ['y', 'u', 'i', 'o', 'p', '7', '8', '9', '0']
+elif os.path.exists(os.path.join(config_path, 'laptop')):
+    labels = ['y', 'u', 'i', 'o', 'p']
+else:
+    labels = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+groups = [Group(label) for label in labels]
+
+for label, group in zip(labels, groups):
+    keys.append(Key([mod], label, lazy.group[group.name].toscreen()))
+    keys.append(Key([mod, "shift"], label, lazy.window.togroup(group.name)))
 
 layouts = [
     layout.MonadTall(border_width=1),
